@@ -19,12 +19,15 @@ From the experiments, we know that online shopping scales better than online dow
 How to touch that Term in our daily code:
 -O(1)
 O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data set.
+
+
 private bool IsFirstElementNull(IList<string> elements)
 {
     return elements[0] == null;
 }
 -O(N)
 O(N) describes an algorithm whose performance will grow linearly and in direct proportion to the size of the input data set. The example below also demonstrates how Big O favours the worst-case performance scenario; a matching string could be found during any iteration of the for loop and the function would return early, but Big O notation will always assume the upper limit where the algorithm will perform the maximum number of iterations.
+ 
 private bool ContainsValue(IList<string> elements, string value)
 {
     foreach (var element in elements)
@@ -41,6 +44,7 @@ private bool ContainsValue(IList<string> elements, string value)
 
 -O(N power 2)
 O(N2) represents an algorithm whose performance is directly proportional to the square of the size of the input data set. This is common with algorithms that involve nested iterations over the data set. Deeper nested iterations will result in O(N3), O(N4) etc.
+
 private bool ContainsDuplicates(IList<string> elements)
 {
     for (var outer = 0; outer < elements.Count; outer++)
